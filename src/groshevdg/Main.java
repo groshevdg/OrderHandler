@@ -10,7 +10,7 @@ import java.util.Queue;
 public class Main {
     public static void main(String[] args) {
         Queue<Order> orders = getOrders();
-        OrderManager manager = OrderManager.getInstance();
+        OrderManager manager = new OrderManager();
         manager.handleOrders(orders);
     }
 

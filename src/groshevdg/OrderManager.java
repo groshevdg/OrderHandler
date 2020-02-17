@@ -7,21 +7,11 @@ import java.security.NoSuchAlgorithmException;
 import java.util.*;
 
 public class OrderManager {
-    private static OrderManager manager;
     private static Map<Integer, OrderHandler> handlers = new HashMap<>();
-    private static final int HANDLER_NUMBERS = 3;
-
-    private OrderManager() { }
-
-    public static OrderManager getInstance() {
-        if (manager == null) {
-            manager = new OrderManager();
-
-            handlers.put(0, new FirstHandler());
-            handlers.put(1, new SecondHandler());
-            handlers.put(2, new ThirdHandler());
-        }
-        return manager;
+    static {
+        handlers.put(0, new FirstHandler());
+        handlers.put(1, new SecondHandler());
+        handlers.put(2, new ThirdHandler());
     }
 
     public void handleOrders(Queue<Order> orders) {
@@ -29,11 +19,11 @@ public class OrderManager {
 
         while (orders.size() != 0) {
 
-            Order order = orders.remove();
+            Order order = orders.poll();
             handlers.get(handlerNumber).handle(order);
             handlerNumber++;
 
-            if (handlerNumber == HANDLER_NUMBERS) {
+            if (handlerNumber == handlers.size()) {
                 handlerNumber = 0;
             }
         }
@@ -56,7 +46,7 @@ public class OrderManager {
                 BigInteger bigInt = new BigInteger(1, digest);
                 hash = bigInt.toString(16);
                 while (hash.length() < 32){
-                    hash = "0"+ hash;
+                    hash = "0" + hash;
                 }
             }
             catch (NoSuchAlgorithmException e) {
@@ -71,7 +61,7 @@ public class OrderManager {
 
     private static class SecondHandler implements OrderHandler {
 
-    private static List<String> specialOrders = new ArrayList<>();
+    private static Set<String> specialOrders = new HashSet<>();
     static {
         specialOrders.add("q");
         specialOrders.add("w");
