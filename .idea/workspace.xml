@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2b9373e-296b-4b72-a97c-57a0a408af42" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/groshevdg/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/groshevdg/OrderHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/groshevdg/OrderManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/groshevdg/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/groshevdg/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/groshevdg/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/groshevdg/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/groshevdg/OrderManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/groshevdg/OrderManager.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +81,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581937412298</updated>
-      <workItem from="1581937416136" duration="8438000" />
+      <workItem from="1581937416136" duration="9137000" />
     </task>
     <servers />
   </component>

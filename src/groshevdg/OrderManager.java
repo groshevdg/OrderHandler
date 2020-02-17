@@ -1,7 +1,6 @@
 package groshevdg;
 
 import java.io.UnsupportedEncodingException;
-import java.lang.reflect.Array;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -99,8 +98,8 @@ public class OrderManager {
 
         @Override
         public void handle(Order order) {
-            System.out.println("\nIt's working the third handler\n");
-            System.out.println(order.getName().replaceAll("[aoe]", ""));
+            System.out.println("\nIt's working the third handler");
+            System.out.println(order.getName().replaceAll("[aoe]", "") + "\n");
         }
     }
 }
