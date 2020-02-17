@@ -17,9 +17,9 @@ public class OrderManager {
         if (manager == null) {
             manager = new OrderManager();
 
-            handlers.put(0, new firstHandler());
-            handlers.put(1, new secondHandler());
-            handlers.put(2, new thirdHandler());
+            handlers.put(0, new FirstHandler());
+            handlers.put(1, new SecondHandler());
+            handlers.put(2, new ThirdHandler());
         }
         return manager;
     }
@@ -40,8 +40,7 @@ public class OrderManager {
     }
 
 
-
-    private static class firstHandler implements OrderHandler {
+    private static class FirstHandler implements OrderHandler {
 
         @Override
         public void handle(Order order) {
@@ -70,7 +69,7 @@ public class OrderManager {
         }
     }
 
-    private static class secondHandler implements OrderHandler {
+    private static class SecondHandler implements OrderHandler {
 
     private static List<String> specialOrders = new ArrayList<>();
     static {
@@ -94,7 +93,7 @@ public class OrderManager {
         }
     }
 
-    private static class thirdHandler implements OrderHandler {
+    private static class ThirdHandler implements OrderHandler {
 
         @Override
         public void handle(Order order) {
